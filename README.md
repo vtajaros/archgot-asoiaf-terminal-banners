@@ -43,13 +43,13 @@ Open a new terminal tab to see it in action!
 
 ## Included Houses
 
-ArchGot includes 74 canon and extended houses from the world of Ice and Fire.
-_(Note: Houses marked with an asterisk `_` have fan-generated/invented words, as no canon words exist in the lore for them).\*
+ArchGot includes 93 canon and extended houses from the world of Ice and Fire.
+*(Note: Houses marked with an asterisk `*` do not have canon house words, so placeholder words closely relating to their house's lore have been given to them).*
 
 <details>
-<summary>View all 74 houses</summary>
+<summary>View all 93 houses</summary>
 
-Allyrion, Appleton, Arryn, Ashford, Baelish, Ball, Bar Emmon, Baratheon, Beesbury, Blackmont, Blacktyde, Blackwood, Bolton, Bracken, Celtigar, Clegane, Connington, Corbray, Crakehall, Darry, Dayne, Dondarrion, Drumm, Dustin, Estermont, Farman, Farwynd, Florent, Frey, Gardener, Gargalen, Glover, Goodbrother, Grafton, Grandison, Greyjoy, Harlaw, Hightower, Hornwood, Karstark, Lannister, Mallister, Manderly, Manwoody, Marbrand, Martell, Mormont, Peake, Penrose, Plumm, Redfort, Redwyne, Reyne, Rowan, Roxton, Royce, Seaworth, Selmy, Stark, Swann, Swyft, Targaryen, Tarly, Tarth, Tully, Tyrell, Umber, Velaryon, Waynwood, Webber, Westerling, Whent, Wylde, Yronwood.
+Allyrion, Appleton, Arryn, Ashford, Baelish, Ball, Bar Emmon, Baratheon, Beesbury, Blackmont, Blacktyde, Blackwood, Bolton, Bracken, Butterwell, Celtigar, Clegane, Connington, Corbray, Crakehall, Crane, Darklyn, Darry, Dayne, Dondarrion, Drumm, Dustin, Estermont, Farman, Farwynd, Fell, Florent, Frey, Gardener, Gargalen, Glover, Goodbrother, Grafton, Grandison, Greyjoy, Harlaw, Hayford, Hightower, Hornwood, Karstark, Lannister, Locke, Lynderly, Mallister, Manderly, Manwoody, Marbrand, Martell, Massey, Mormont, Peake, Penrose, Plumm, Redfort, Redwyne, Reyne, Rosby, Rowan, Roxton, Royce, Ryswell, Seaworth, Selmy, Stark, Stokeworth, Strong, Swann, Swyft, Tallhart, Targaryen, Tarly, Tarth, Templeton, Thorne, Trant, Tully, Tyrell, Umber, Vance of Wayfarer's Rest, Velaryon, Vyrwel, Waynwood, Webber, Westerling, Whent, Wyl, Wylde, Yronwood.
 
 </details>
 
