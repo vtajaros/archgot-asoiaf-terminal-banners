@@ -1,6 +1,7 @@
 #!/bin/bash
 # generate_banners.sh
-# Reads data/houses.json, finds matching images in banners/, and generates ANSI text files in out/
+# Syncs source.txt -> data/houses.json, then generates ANSI text files in out/
+# source.txt is the single source of truth for house data.
 
 set -e
 
@@ -21,8 +22,12 @@ if ! command -v chafa &> /dev/null; then
     exit 1
 fi
 
+# Sync source.txt -> houses.json before generating
+echo "Syncing source.txt -> data/houses.json..."
+bash "$(dirname "$0")/sync_data.sh"
+
 LOGFILE="scripts/generate_banners.log"
-> "$LOGFILE"
+true > "$LOGFILE"
 
 # Make output dir
 mkdir -p out
@@ -60,6 +65,10 @@ while read -r row; do
         src_file="banners/375px-House_Baelish_of_Harrenhal.svg.webp"
     elif [[ "$slug" == "farwynd" ]]; then
         src_file="banners/375px-House_Farwynd_of_the_Lonely_Light.svg.webp"
+    elif [[ "$slug" == "vyrwel" ]]; then
+        src_file="banners/375px-House_Vyrwel_2.svg.webp"
+    elif [[ "$slug" == "vance_of_wayfarer's_rest" ]]; then
+        src_file="banners/375px-House_Vance_of_Wayfarer's_Rest.svg.webp"
     else
         # Standard format
         # E.g., House_Bar_Emmon -> Bar_Emmon
@@ -116,27 +125,35 @@ done < <(jq -c '.[]' data/houses.json)
 
 # Check for unaccounted files in banners/
 for f in banners/*; do
-    if [[ -f "$f" ]]; then
-        f_slug=$(basename "$f" | sed -E 's/^[0-9]+px-House_//i' | sed -E 's/\.(svg\.)?(webp|png)$//i' | tr '[:upper:]' '[:lower:]' | tr ' ' '_')
-        # Skip known excluded file
-        if [[ "$(basename "$f")" == "375px-WylCoA.webp" ]]; then
-            continue
+    [[ -f "$f" ]] || continue
+    bname=$(basename "$f")
+
+    # Skip known excluded files (no manifest entry)
+    [[ "$bname" == "375px-WylCoA.webp" ]] && continue
+
+    # Skip files whose names don't match the standard slug directly
+    # but are accounted for via the exceptions list above
+    case "$bname" in
+        375px-House_Baelish_of_Harrenhal.svg.webp) continue ;;
+        375px-House_Farwynd_of_the_Lonely_Light.svg.webp) continue ;;
+        375px-House_Vyrwel_2.svg.webp) continue ;;
+        "375px-House_Vance_of_Wayfarer's_Rest.svg.webp") continue ;;
+    esac
+
+    f_slug=$(echo "$bname" | sed -E 's/^[0-9]+px-House_//i' | sed -E 's/\.(svg\.)?(webp|png)$//i' | tr '[:upper:]' '[:lower:]' | tr ' ' '_')
+
+    found=0
+    while IFS=',' read -r h _rest; do
+        [[ "$h" == "HOUSE" || -z "$h" ]] && continue
+        h_slug=$(echo "$h" | tr '[:upper:]' '[:lower:]' | tr ' ' '_')
+        if [[ "$h_slug" == "$f_slug" ]]; then
+            found=1
+            break
         fi
-        
-        # Check if this slug exists in the JSON
-        if ! jq -e --arg s "$f_slug" '.[] | select((.house | ascii_downcase | sub(" "; "_"; "g")) == $s or $s == "baelish_of_harrenhal" or $s == "farwynd_of_the_lonely_light")' data/houses.json > /dev/null; then
-             # Try simpler check
-             found=0
-             for h in $(jq -r '.house' data/houses.json | tr '[:upper:]' '[:lower:]' | tr ' ' '_'); do
-                 if [[ "$h" == "$f_slug" || ("$h" == "baelish" && "$f_slug" == "baelish_of_harrenhal") || ("$h" == "farwynd" && "$f_slug" == "farwynd_of_the_lonely_light") ]]; then
-                     found=1
-                     break
-                 fi
-             done
-             if [[ $found -eq 0 ]]; then
-                 echo "Warning: Source file not matched to any manifest entry: $f" | tee -a "$LOGFILE"
-             fi
-        fi
+    done < source.txt
+
+    if [[ $found -eq 0 ]]; then
+        echo "Warning: Source file not matched to any manifest entry: $f" | tee -a "$LOGFILE"
     fi
 done
 

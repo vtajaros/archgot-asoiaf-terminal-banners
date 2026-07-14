@@ -5,7 +5,7 @@ Arryn,Vale,As High as Honor,canon
 Ashford,Reach,Our Sun Shines Bright,canon
 Baelish,Vale/Riverlands,Rise From Nothing,invented
 Ball,Reach,Steady and Sure,invented
-Bar Emmon,Stormlands,First to the Tide,invented
+Bar Emmon,Crownlands,Swift and Sharp,invented
 Baratheon,Stormlands,Ours is the Fury,canon
 Beesbury,Reach,Beware Our Sting,canon
 Blackmont,Dorne,Shadow of the Mountain,invented
@@ -52,7 +52,7 @@ Redfort,Vale,As Strong as Stone,canon
 Redwyne,Reach,Our Vintage Never Fades,invented
 Reyne,Westerlands,None Shall Sing of Us,invented
 Rowan,Reach,Deep Roots Strong Boughs,invented
-Roxton,Dorne,Steel in the Sand,invented
+Roxton,Reach,Orphans of the Steel,invented
 Royce,Vale,We Remember,canon
 Selmy,Reach,Duty Above All,invented
 Stark,North,Winter is Coming,canon
@@ -66,10 +66,29 @@ Tyrell,Reach,Growing Strong,canon
 Umber,North,Death Before Chains,canon
 Velaryon,Crownlands,The Old the True the Brave,canon
 Waynwood,Vale,Steady as the Mountain,invented
-Webber,Dorne,Patient as the Desert,invented
+Webber,Reach,Cold as the Moat,invented
 Westerling,Westerlands,Honor not Honors,canon
-Whent,Riverlands,Masters of Harrenhal,invented
+Whent,Riverlands,Rising from the Ruin,invented
+Wyl,Dorne,Hidden in the Stone,invented
 Wylde,Stormlands,Untamed and True,invented
 Yronwood,Dorne,We Guard the Way,canon
 Dondarrion,Stormlands,Swift as Lightning,invented
 Seaworth,Stormlands,Humble Beginnings Honest Deeds,invented
+Butterwell,Riverlands,Flowing with Bounty,invented
+Crane,Reach,Grace Takes Flight,invented
+Darklyn,Crownlands,Shields of the Dusk,invented
+Fell,Stormlands,Watchers in the Woods,invented
+Hayford,Crownlands,Bound by Loyalty,invented
+Locke,North,We Hold the Keys,invented
+Lynderly,Vale,Hidden in the Leaves,invented
+Massey,Crownlands,Carved in Stone,invented
+Rosby,Crownlands,Providing for the Realm,invented
+Ryswell,North,Swift as the Wind,invented
+Stokeworth,Crownlands,Proud to Be Faithful,canon
+Strong,Riverlands,Strength in the Blood,invented
+Tallhart,North,Proud and Free,canon
+Templeton,Vale,Guided by the Stars,invented
+Thorne,Crownlands,Strike with Iron,invented
+Trant,Stormlands,So End Our Foes,canon
+Vance of Wayfarer's Rest,Riverlands,Watching the Way,invented
+Vyrwel,Reach,Shadow of the Wyvern,invented

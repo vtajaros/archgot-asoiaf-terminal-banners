@@ -3,7 +3,6 @@
 Display a random Game of Thrones house coat-of-arms and house words whenever you open a new terminal!
 
 <img width="1915" height="1154" alt="image" src="https://github.com/user-attachments/assets/1cda72b2-e90c-4d97-be5d-12889d6e5495" />
-
 Like `pokescript`, this runs a lightweight, pre-rendered script in your `~/.bashrc` to show high-quality ANSI block art without any runtime processing or image dependencies.
 
 ## Installation
@@ -13,14 +12,19 @@ There are two ways to install ArchGot:
 ### 1. Arch Linux Native (Recommended for Arch users)
 
 If this repository is uploaded to the AUR (e.g. as `archgot-git`), you can install it using an AUR helper like `yay`:
+
 ```bash
 yay -S archgot-git
 ```
+
 Or build it manually using `makepkg` directly from this repository:
+
 ```bash
 makepkg -si
 ```
+
 Then, add this to your `~/.bashrc`:
+
 ```bash
 [ -f /usr/share/archgot/got-banner.sh ] && source /usr/share/archgot/got-banner.sh
 ```
@@ -28,9 +32,11 @@ Then, add this to your `~/.bashrc`:
 ### 2. Local Installation (For any distro or quick setup)
 
 You can install it locally to your user profile by running:
+
 ```bash
 ./install.sh
 ```
+
 This script will automatically generate the banners, copy them to `~/.local/share/got-banners/`, and append the correct line to your `~/.bashrc`.
 
 Open a new terminal tab to see it in action!
@@ -38,7 +44,7 @@ Open a new terminal tab to see it in action!
 ## Included Houses
 
 ArchGot includes 74 canon and extended houses from the world of Ice and Fire.
-*(Note: Houses marked with an asterisk `*` have fan-generated/invented words, as no canon words exist in the lore for them).* 
+_(Note: Houses marked with an asterisk `_` have fan-generated/invented words, as no canon words exist in the lore for them).\*
 
 <details>
 <summary>View all 74 houses</summary>
@@ -54,10 +60,11 @@ ArchGot is completely open source and modular! You can easily add new houses or 
 1. **Add your image**: Place your house's `.webp` or `.png` coat-of-arms image inside the `banners/` directory.
    - For example: `banners/MyHouse.webp`
 
-2. **Update the Manifest**: Open `data/houses.json` and add an entry for your new house. 
+2. **Update the Manifest**: Open `data/houses.json` and add an entry for your new house.
    - `house`: The exact name of your house (e.g. "MyHouse")
    - `words`: The motto to display under the banner
    - `region` & `source`: For metadata purposes
+
    ```json
    {
      "house": "MyHouse",
@@ -72,7 +79,7 @@ ArchGot is completely open source and modular! You can easily add new houses or 
    ./install.sh
    ```
 
-*(Note: Re-generation requires `chafa` and `jq` to be installed on your system).*
+_(Note: Re-generation requires `chafa` and `jq` to be installed on your system)._
 
 ## Uninstallation
 
