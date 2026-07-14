@@ -20,12 +20,22 @@ fi
 
 # Ensure the directory exists and contains files before proceeding
 if [[ -d "$BANNER_DIR" ]]; then
-  # Load all .txt banners into an array
-  mapfile -t banners < <(find "$BANNER_DIR" -maxdepth 1 -name "*.txt" -print)
-  
-  if [ "${#banners[@]}" -gt 0 ]; then
-    # Pick a random banner and display it
-    cat "${banners[RANDOM % ${#banners[@]}]}"
-    echo "" # Add a trailing newline for spacing before the prompt
+  if [[ -f "$BANNER_DIR/pool.txt" ]]; then
+    # Weighted random selection using pool.txt
+    mapfile -t pool < "$BANNER_DIR/pool.txt"
+    if [ "${#pool[@]}" -gt 0 ]; then
+      selected_banner="${pool[RANDOM % ${#pool[@]}]}"
+      if [[ -f "$BANNER_DIR/$selected_banner" ]]; then
+        cat "$BANNER_DIR/$selected_banner"
+        echo ""
+      fi
+    fi
+  else
+    # Fallback to unweighted selection across .txt files
+    mapfile -t banners < <(find "$BANNER_DIR" -maxdepth 1 -name "*.txt" ! -name "pool.txt" -print)
+    if [ "${#banners[@]}" -gt 0 ]; then
+      cat "${banners[RANDOM % ${#banners[@]}]}"
+      echo ""
+    fi
   fi
 fi

@@ -31,6 +31,8 @@ true > "$LOGFILE"
 
 # Make output dir
 mkdir -p out
+POOLFILE="out/pool.txt"
+true > "$POOLFILE"
 
 total=0
 success=0
@@ -42,6 +44,7 @@ while read -r row; do
     house=$(echo "$row" | jq -r '.house')
     words=$(echo "$row" | jq -r '.words')
     source_val=$(echo "$row" | jq -r '.source')
+    tier_val=$(echo "$row" | jq -r '.tier // "minor"')
     
     # Normalize slug
     # - lowercase
@@ -129,6 +132,16 @@ while read -r row; do
         # Append styled centered text below
         echo -e "${name_indent}${BOLD}${name_str}${RESET}" >> "$out_file"
         echo -e "${words_indent}${ITALIC}${words_str}${RESET}" >> "$out_file"
+        
+        # Add to weighted random pool based on tier
+        case "$tier_val" in
+            great) weight=5 ;;
+            important) weight=3 ;;
+            *) weight=1 ;;
+        esac
+        for (( w=0; w<weight; w++ )); do
+            echo "${slug}.txt" >> "$POOLFILE"
+        done
         
         success=$((success + 1))
     else

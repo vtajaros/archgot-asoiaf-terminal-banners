@@ -18,7 +18,7 @@ mkdir -p data
 echo "[" > "$OUT"
 
 first=true
-while IFS=',' read -r house region words source_val; do
+while IFS=',' read -r house region words source_val tier; do
     # Skip header line
     [[ "$house" == "HOUSE" ]] && continue
     # Skip blank lines
@@ -29,6 +29,8 @@ while IFS=',' read -r house region words source_val; do
     region="${region%$'\r'}"
     words="${words%$'\r'}"
     source_val="${source_val%$'\r'}"
+    tier="${tier%$'\r'}"
+    [[ -z "$tier" ]] && tier="minor"
 
     # Escape any double quotes in words for valid JSON
     words="${words//\"/\\\"}"
@@ -39,8 +41,8 @@ while IFS=',' read -r house region words source_val; do
         echo "," >> "$OUT"
     fi
 
-    printf '  {"house": "%s", "region": "%s", "words": "%s", "source": "%s"}' \
-        "$house" "$region" "$words" "$source_val" >> "$OUT"
+    printf '  {"house": "%s", "region": "%s", "words": "%s", "source": "%s", "tier": "%s"}' \
+        "$house" "$region" "$words" "$source_val" "$tier" >> "$OUT"
 
 done < "$SRC"
 
