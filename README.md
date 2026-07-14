@@ -2,6 +2,8 @@
 
 Display a random Game of Thrones house coat-of-arms and house words whenever you open a new terminal!
 
+<img width="1915" height="1154" alt="image" src="https://github.com/user-attachments/assets/1cda72b2-e90c-4d97-be5d-12889d6e5495" />
+
 Like `pokescript`, this runs a lightweight, pre-rendered script in your `~/.bashrc` to show high-quality ANSI block art without any runtime processing or image dependencies.
 
 ## Installation
