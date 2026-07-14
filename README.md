@@ -1,4 +1,4 @@
-# asoiaf-terminal-banners
+# asoiaf-terminal-banners (archgot)
 
 Display a random A Song of Ice and Fire / Game of Thrones house coat-of-arms and house words whenever you open a new terminal (powered by `archgot`)!
 
@@ -44,7 +44,7 @@ Run `archgot` in your terminal or open a new terminal tab to see it in action!
 ## Included Houses
 
 asoiaf-terminal-banners includes 93 canon and extended houses from the world of Ice and Fire.
-*(Note: Houses marked with an asterisk `*` do not have canon house words, so placeholder words closely relating to their house's lore have been given to them).*
+_(Note: Houses marked with an asterisk `_` do not have canon house words, so placeholder words closely relating to their house's lore have been given to them).\*
 
 <details>
 <summary>View all 93 houses</summary>
@@ -97,4 +97,3 @@ To remove asoiaf-terminal-banners, simply delete the source line from your `~/.b
 ```bash
 rm -rf ~/.local/share/asoiaf-terminal-banners
 ```
-
