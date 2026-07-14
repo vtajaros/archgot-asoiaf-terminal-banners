@@ -36,6 +36,7 @@ echo "Starting batch conversion..."
 while read -r row; do
     house=$(echo "$row" | jq -r '.house')
     words=$(echo "$row" | jq -r '.words')
+    source_val=$(echo "$row" | jq -r '.source')
     
     # Normalize slug
     # - lowercase
@@ -99,7 +100,11 @@ while read -r row; do
         
         # Append styled text below
         echo -e "${BOLD}House ${house}${RESET}" >> "$out_file"
-        echo -e "${ITALIC}\"${words}\"${RESET}" >> "$out_file"
+        if [[ "$source_val" != "canon" ]]; then
+            echo -e "${ITALIC}\"${words}\" *${RESET}" >> "$out_file"
+        else
+            echo -e "${ITALIC}\"${words}\"${RESET}" >> "$out_file"
+        fi
         
         success=$((success + 1))
     else

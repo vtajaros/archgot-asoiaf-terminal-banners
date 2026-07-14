@@ -9,7 +9,14 @@ case $- in
   *) return ;;
 esac
 
-BANNER_DIR="$HOME/.local/share/got-banners"
+# Check for local install first, then global install
+if [[ -d "$HOME/.local/share/got-banners" ]]; then
+  BANNER_DIR="$HOME/.local/share/got-banners"
+elif [[ -d "/usr/share/archgot/banners" ]]; then
+  BANNER_DIR="/usr/share/archgot/banners"
+else
+  return 2>/dev/null || exit 0
+fi
 
 # Ensure the directory exists and contains files before proceeding
 if [[ -d "$BANNER_DIR" ]]; then

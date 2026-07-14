@@ -6,22 +6,37 @@ Like `pokescript`, this runs a lightweight, pre-rendered script in your `~/.bash
 
 ## Installation
 
-You can install it directly by running:
+There are two ways to install ArchGot:
 
+### 1. Arch Linux Native (Recommended for Arch users)
+
+If this repository is uploaded to the AUR (e.g. as `archgot-git`), you can install it using an AUR helper like `yay`:
+```bash
+yay -S archgot-git
+```
+Or build it manually using `makepkg` directly from this repository:
+```bash
+makepkg -si
+```
+Then, add this to your `~/.bashrc`:
+```bash
+[ -f /usr/share/archgot/got-banner.sh ] && source /usr/share/archgot/got-banner.sh
+```
+
+### 2. Local Installation (For any distro or quick setup)
+
+You can install it locally to your user profile by running:
 ```bash
 ./install.sh
 ```
-
-This will:
-1. Generate the banners if they aren't generated yet (requires `chafa` and `jq`).
-2. Copy the pre-rendered `.txt` files and the dispatcher script to `~/.local/share/got-banners/`.
-3. Add a line to your `~/.bashrc` so a random banner shows up on new interactive shell sessions.
+This script will automatically generate the banners, copy them to `~/.local/share/got-banners/`, and append the correct line to your `~/.bashrc`.
 
 Open a new terminal tab to see it in action!
 
 ## Included Houses
 
-ArchGot includes 74 canon and extended houses from the world of Ice and Fire:
+ArchGot includes 74 canon and extended houses from the world of Ice and Fire.
+*(Note: Houses marked with an asterisk `*` have fan-generated/invented words, as no canon words exist in the lore for them).* 
 
 <details>
 <summary>View all 74 houses</summary>
