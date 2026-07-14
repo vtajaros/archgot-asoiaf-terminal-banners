@@ -25,7 +25,11 @@ package() {
   install -dm755 "$pkgdir/usr/share/asoiaf-terminal-banners/banners"
   install -m644 out/*.txt "$pkgdir/usr/share/asoiaf-terminal-banners/banners/"
   
-  # Install the dispatcher script to a share directory so it can be sourced
+  # Install dispatcher script to share directory
   install -dm755 "$pkgdir/usr/share/asoiaf-terminal-banners"
-  install -m755 scripts/got-banner.sh "$pkgdir/usr/share/asoiaf-terminal-banners/got-banner.sh"
+  install -m755 scripts/archgot "$pkgdir/usr/share/asoiaf-terminal-banners/archgot"
+  
+  # Install executable command to /usr/bin/archgot
+  install -dm755 "$pkgdir/usr/bin"
+  install -m755 scripts/archgot "$pkgdir/usr/bin/archgot"
 }

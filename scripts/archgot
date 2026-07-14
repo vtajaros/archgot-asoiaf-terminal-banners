@@ -1,19 +1,19 @@
 #!/bin/bash
-# got-banner.sh
-# Prints a random Game of Thrones banner on interactive shell startup.
+# archgot
+# Displays a random A Song of Ice and Fire / Game of Thrones house banner and words.
 
-# Exit if not running in an interactive shell to prevent breaking
-# scripts, cron jobs, or non-interactive remote commands (e.g., scp/rsync).
-case $- in
-  *i*) ;;
-  *) return ;;
-esac
+# Exit if not running in an interactive shell or terminal TTY
+if [[ $- != *i* ]] && [[ ! -t 1 ]]; then
+  return 2>/dev/null || exit 0
+fi
 
-# Check for local install first, then global install
+# Check for local install first, then global Arch install, then local repo folder
 if [[ -d "$HOME/.local/share/asoiaf-terminal-banners" ]]; then
   BANNER_DIR="$HOME/.local/share/asoiaf-terminal-banners"
 elif [[ -d "/usr/share/asoiaf-terminal-banners/banners" ]]; then
   BANNER_DIR="/usr/share/asoiaf-terminal-banners/banners"
+elif [[ -d "$(dirname "$0")/../out" ]]; then
+  BANNER_DIR="$(dirname "$0")/../out"
 else
   return 2>/dev/null || exit 0
 fi

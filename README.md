@@ -1,6 +1,6 @@
 # asoiaf-terminal-banners
 
-Display a random A Song of Ice and Fire / Game of Thrones house coat-of-arms and house words whenever you open a new terminal!
+Display a random A Song of Ice and Fire / Game of Thrones house coat-of-arms and house words whenever you open a new terminal (powered by `archgot`)!
 
 <img width="1915" height="1154" alt="image" src="https://github.com/user-attachments/assets/1cda72b2-e90c-4d97-be5d-12889d6e5495" />
 Like `pokescript`, this runs a lightweight, pre-rendered script in your `~/.bashrc` to show high-quality ANSI block art without any runtime processing or image dependencies.
@@ -26,7 +26,7 @@ makepkg -si
 Then, add this to your `~/.bashrc`:
 
 ```bash
-[ -f /usr/share/asoiaf-terminal-banners/got-banner.sh ] && source /usr/share/asoiaf-terminal-banners/got-banner.sh
+[ -f /usr/share/asoiaf-terminal-banners/archgot ] && source /usr/share/asoiaf-terminal-banners/archgot
 ```
 
 ### 2. Local Installation (For any distro or quick setup)
@@ -37,9 +37,9 @@ You can install it locally to your user profile by running:
 ./install.sh
 ```
 
-This script will automatically generate the banners, copy them to `~/.local/share/asoiaf-terminal-banners/`, and append the correct line to your `~/.bashrc`.
+This script will automatically generate the banners, copy them to `~/.local/share/asoiaf-terminal-banners/`, install the `archgot` command, and append the correct line to your `~/.bashrc`.
 
-Open a new terminal tab to see it in action!
+Run `archgot` in your terminal or open a new terminal tab to see it in action!
 
 ## Included Houses
 
