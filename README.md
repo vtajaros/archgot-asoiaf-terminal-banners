@@ -41,10 +41,35 @@ This script will automatically generate the banners, copy them to `~/.local/shar
 
 Run `archgot` in your terminal or open a new terminal tab to see it in action!
 
+## Usage
+
+### Display a Random Banner
+Run the `archgot` command anywhere in your terminal to output a random house coat-of-arms and motto on demand:
+
+```bash
+archgot
+```
+
+### Display a Specific House Banner
+You can view a specific house's banner directly by outputting its text file:
+
+**System-wide Installation (Arch/AUR):**
+```bash
+cat /usr/share/asoiaf-terminal-banners/banners/stark.txt
+```
+
+**Local Installation:**
+```bash
+cat ~/.local/share/asoiaf-terminal-banners/stark.txt
+```
+
+### Automatic Startup (MOTD)
+When installed, `archgot` automatically runs upon opening any interactive shell tab via your `~/.bashrc`.
+
 ## Included Houses
 
 asoiaf-terminal-banners includes 93 canon and extended houses from the world of Ice and Fire.
-_(Note: Houses marked with an asterisk `_` do not have canon house words, so placeholder words closely relating to their house's lore have been given to them).\*
+*(Note: Houses marked with an asterisk `*` do not have canon house words, so placeholder words closely relating to their house's lore have been given to them).*
 
 <details>
 <summary>View all 93 houses</summary>
