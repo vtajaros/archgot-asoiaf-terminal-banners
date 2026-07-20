@@ -98,7 +98,7 @@ archgot includes 124 canon and extended houses from the world of Ice and Fire.
 <details>
 <summary>View all 124 houses by region</summary>
 
-- **Crownlands (16):** Bar Emmon\*, Brune of Brownhollow\*, Buckwell, Cargyll\*, Celtigar\*, Chelsted\*, Darklyn\*, Hayford\*, Massey\*, Rosby\*, Staunton\*, Stokeworth, Targaryen, Thorne\*, Velaryon, Wendwater.
+- **Crownlands/Dragonstone (16):** Bar Emmon\*, Brune of Brownhollow\*, Buckwell, Cargyll\*, Celtigar\*, Chelsted\*, Darklyn\*, Hayford\*, Massey\*, Rosby\*, Staunton\*, Stokeworth, Targaryen, Thorne\*, Velaryon, Wendwater.
 - **Dorne (11):** Allyrion, Blackmont\*, Dayne\*, Fowler, Gargalen\*, Jordayne, Manwoody\*, Martell, Uller\*, Wyl\*, Yronwood.
 - **Iron Islands (9):** Blacktyde\*, Codd, Drumm\*, Farwynd\*, Goodbrother\*, Greyjoy, Harlaw\*, Stonehouse\*, Volmark\*.
 - **The North (17):** Bolton, Cassel\*, Cerwyn, Dustin, Flint of Widow's Watch, Glover\*, Hornwood, Karstark, Locke\*, Manderly\*, Mormont, Reed\*, Ryswell\*, Stark, Tallhart, Umber, Whitehill\*.
