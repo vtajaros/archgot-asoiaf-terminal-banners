@@ -96,9 +96,17 @@ archgot includes 124 canon and extended houses from the world of Ice and Fire.
 *(Note: Houses marked with an asterisk `*` do not have canon house words, so placeholder words closely relating to their house's lore have been given to them).*
 
 <details>
-<summary>View all 124 houses</summary>
+<summary>View all 124 houses by region</summary>
 
-Allyrion, Appleton, Arryn, Ashford, Baelish, Ball, Bar Emmon, Baratheon, Beesbury, Blackmont, Blacktyde, Blackwood, Bolton, Bracken, Brax, Brune of Brownhollow, Buckwell, Bulwer, Butterwell, Cargyll, Cassel, Celtigar, Cerwyn, Chelsted, Clegane, Codd, Connington, Corbray, Crakehall, Crane, Darklyn, Darry, Dayne, Dondarrion, Drumm, Dustin, Estermont, Farman, Farring, Farwynd, Fell, Flint of Widow's Watch, Florent, Fossoway of Cider Hall, Fossoway of New Barrel, Fowler, Frey, Gardener, Gargalen, Glover, Goodbrother, Graceford, Grafton, Grandison, Greyjoy, Harlaw, Hayford, Hightower, Hornwood, Jordayne, Karstark, Lannister, Locke, Lonmouth, Lynderly, Mallister, Manderly, Manwoody, Marbrand, Martell, Massey, Merryweather, Mooton, Mormont, Oakheart, Payne, Peake, Penrose, Piper, Plumm, Redfort, Redwyne, Reed, Reyne, Rosby, Rowan, Roxton, Royce, Ryswell, Seaworth, Selmy, Smallwood, Stark, Staunton, Stokeworth, Stonehouse, Strong, Swann, Swyft, Tallhart, Targaryen, Tarly, Tarth, Templeton, Thorne, Trant, Tully, Tyrell, Uller, Umber, Vance of Wayfarer's Rest, Velaryon, Volmark, Vyrwel, Waxley, Waynwood, Webber, Wendwater, Westerling, Whent, Whitehill, Wyl, Wylde, Yronwood.
+- **Crownlands (16):** Bar Emmon\*, Brune of Brownhollow\*, Buckwell, Cargyll\*, Celtigar\*, Chelsted\*, Darklyn\*, Hayford\*, Massey\*, Rosby\*, Staunton\*, Stokeworth, Targaryen, Thorne\*, Velaryon, Wendwater.
+- **Dorne (11):** Allyrion, Blackmont\*, Dayne\*, Fowler, Gargalen\*, Jordayne, Manwoody\*, Martell, Uller\*, Wyl\*, Yronwood.
+- **Iron Islands (9):** Blacktyde\*, Codd, Drumm\*, Farwynd\*, Goodbrother\*, Greyjoy, Harlaw\*, Stonehouse\*, Volmark\*.
+- **The North (17):** Bolton, Cassel\*, Cerwyn, Dustin, Flint of Widow's Watch, Glover\*, Hornwood, Karstark, Locke\*, Manderly\*, Mormont, Reed\*, Ryswell\*, Stark, Tallhart, Umber, Whitehill\*.
+- **Reach (26):** Appleton\*, Ashford, Ball\*, Beesbury, Bulwer, Crane\*, Florent\*, Fossoway of Cider Hall, Fossoway of New Barrel\*, Gardener\*, Graceford, Grandison, Hightower, Merryweather, Oakheart, Peake\*, Penrose, Redwyne\*, Rowan\*, Roxton\*, Selmy\*, Smallwood, Tarly, Tyrell, Vyrwel\*, Webber\*.
+- **Riverlands (12):** Blackwood\*, Bracken\*, Butterwell\*, Darry\*, Frey\*, Mallister, Mooton, Piper, Strong\*, Tully, Vance of Wayfarer's Rest\*, Whent\*.
+- **Stormlands (12):** Baratheon, Connington\*, Dondarrion\*, Estermont\*, Farring\*, Fell\*, Lonmouth, Seaworth\*, Swann\*, Tarth\*, Trant, Wylde\*.
+- **The Vale (10):** Arryn, Baelish\*, Corbray\*, Grafton\*, Lynderly\*, Redfort, Royce, Templeton\*, Waxley, Waynwood\*.
+- **Westerlands (11):** Brax\*, Clegane\*, Crakehall, Farman, Lannister, Marbrand, Payne\*, Plumm, Reyne\*, Swyft, Westerling.
 
 </details>
 
