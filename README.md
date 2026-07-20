@@ -1,6 +1,6 @@
-# archgot-asoiaf-terminal-banners (archgot)
+# archgot
 
-Display a random A Song of Ice and Fire / Game of Thrones house coat-of-arms and house words whenever you open a new terminal (powered by `archgot`)!
+Display a random A Song of Ice and Fire / Game of Thrones house coat-of-arms and house words whenever you open a new terminal!
 
 <img width="1920" height="1162" alt="image" src="https://github.com/user-attachments/assets/789c0597-cd50-466a-9442-a248a30b4f5a" />
 <img width="1920" height="1159" alt="image" src="https://github.com/user-attachments/assets/1b3332ae-4f9d-4bdd-8eb0-9a10008927d3" />
@@ -23,9 +23,11 @@ Available on the Arch User Repository as [`archgot-git`](https://aur.archlinux.o
 yay -S archgot-git
 ```
 
-Or build it manually using `makepkg` directly from this repository:
+Or build it manually using `makepkg` directly from the repository:
 
 ```bash
+git clone https://github.com/vtajaros/archgot-asoiaf-terminal-banners.git archgot
+cd archgot
 makepkg -si
 ```
 
